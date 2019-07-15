@@ -1,30 +1,43 @@
-if (process.env.NODE_ENV !== 'production') {
-  require('dotenv').config()
+//npm install unirest
+//npm install axios
+//yarn add dotenv must be required in order to hide api keys in dev
+//create a file called .env and add API key
+//create a file called .gitignore with all of the common things to ignore so you do not push keys to the public repo
+//once you push, there is a dif process that we will learn later to add the secret .env to prod
+if (process.env.NODE_ENV !== "production") {
+  require("dotenv").config();
 }
 
-const express = require("express")
-const path = require("path")
-const app = express()
+const unirest = require("unirest");
+const express = require("express");
+const app = express();
 
-// JUST FOR DEMO PURPOSES, PUT YOUR ACTUAL API CODE HERE
-app.get('/api/demo', (request, response) => {
-  response.json({
-    message: "Hello from server.js"
-  })
-})
-// END DEMO
+//assign a port
+const port = process.env.port || 3000;
 
-if (process.env.NODE_ENV === 'production') {
-  // Serve any static files
-  app.use(express.static(path.join(__dirname, 'client/build')))
-  // Handle React routing, return all requests to React app
-  app.get('*', (request, response) => {
-    response.sendFile(path.join(__dirname, 'client/build', 'index.html'))
-  })
-}
+// function getNutritionInfo() {
+app.get("/food", (request, response) => {
+  // assign variables from inputs
+  // const nutrient = document.getElementById("nutrient_input").value;
+  // const quant = document.getElementById("quant_input").value;
+  // const food = document.getElementById("food_input").value;
 
-const port = process.env.PORT || 8080
-app.listen(
-  port,
-  () => { console.log(`API listening on port ${port}...`) }
-)
+  const nutrient = "vitamin c";
+  const quant = "3";
+  const food = "apples";
+
+  unirest
+    .get(
+      `https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/quickAnswer?q=How+much+${nutrient}+is+in+${quant}+${food}%3F}`
+    )
+    .header(
+      "X-RapidAPI-Host",
+      "spoonacular-recipe-food-nutrition-v1.p.rapidapi.com"
+    )
+    .header("X-RapidAPI-Key", `${process.env.SPOONACULAR_API_KEY}`)
+    .end(function(result) {
+      response.json(result.body);
+    });
+});
+
+app.listen(port);

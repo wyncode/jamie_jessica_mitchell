@@ -5,7 +5,8 @@
   "license": "MIT",
   "dependencies": {
     "dotenv": "^8.0.0",
-    "express": "^4.16.4"
+    "express": "^4.16.4",
+    "unirest": "^0.6.0"
   },
   "scripts": {
     "start": "node server.js",
