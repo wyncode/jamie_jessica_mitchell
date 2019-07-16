@@ -10,9 +10,8 @@ class MealPlan extends React.Component {
   render(){
    
     return(
-      <>
-      <div id="MealPlan">
-        <h1>Meal Plan</h1>
+      <div id="Meal Plan">
+        <h1 id="title">Meal Plan</h1>
         <table>
           <tr>
           <th></th>
@@ -56,9 +55,7 @@ class MealPlan extends React.Component {
         </tr>
         </table>
         
-        </div>
-
-      </>
+      </div>
     )
   }
 

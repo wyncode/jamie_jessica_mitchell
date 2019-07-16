@@ -1,5 +1,7 @@
+
+
 table, th, td {
-  border: 1px solid black;
+  border: 1px solid grey;
 
 }
 
@@ -7,6 +9,17 @@ table {
   width: 100%
 }
 
-#MealPlan{
-  
+#title {
+  text-align: center;
+  font-family: sans-serif;
+}
+
+body{
+ background-color: 	hsl(210, 100%, 85%);
+}
+
+
+*{
+  font-family: sans-serif;
+  color: white;
 }
