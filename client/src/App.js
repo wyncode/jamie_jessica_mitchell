@@ -2,10 +2,10 @@ import React from "react";
 import "./App.css";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import Home from "./pages/Home";
-import ShoppingList from "./pages/shoppinglist";
-import AboutUs from "./pages/about";
-import CreatePlan from "./pages/createplan";
-import MealPlan from "./pages/mealplan";
+import ShoppingList from "./pages/Shoppinglist";
+import AboutUs from "./pages/About";
+import CreatePlan from "./pages/Createplan";
+import MealPlan from "./pages/Mealplan";
 import Navbar from "./Components/Navbar";
 
 const App = () => {
@@ -17,7 +17,7 @@ const App = () => {
         <Route exact path="/about" component={AboutUs} />
         <Route exact path="/createplan" component={CreatePlan} />
         <Route exact path="/shoppinglist" component={ShoppingList} />
-        <Route exact path="/mealplan" component={MealPlan}/>
+        <Route exact path="/mealplan" component={MealPlan} />
       </Switch>
     </BrowserRouter>
   );
