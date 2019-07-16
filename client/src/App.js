@@ -10,10 +10,12 @@ import Navbar from "./Components/Navbar";
 
 class App extends React.Component {
   state = { userChoices: {} };
-  
+
   updateChoice = (choice, value) => {
-    this.setState({ userChoices[choice]: value })
-  }
+    let choices = this.state.userChoices;
+    choices[choice] = value;
+    this.setState({ userChoices: choices });
+  };
 
   render() {
     return (
@@ -22,9 +24,21 @@ class App extends React.Component {
         <Switch>
           <Route exact path="/" component={Home} />
           <Route exact path="/about" component={AboutUs} />
-          <Route exact path="/createplan" render={ props => <CreatePlan {...props} updateChoice={this.updateChoice} />} />
+          <Route
+            exact
+            path="/createplan"
+            render={props => (
+              <CreatePlan {...props} updateChoice={this.updateChoice} />
+            )}
+          />
           <Route exact path="/shoppinglist" component={ShoppingList} />
-          <Route exact path="/mealplan" render={ props => <MealPlan {...props} userChoices={this.state.userChoices} />}/>
+          <Route
+            exact
+            path="/mealplan"
+            render={props => (
+              <MealPlan {...props} userChoices={this.state.userChoices} />
+            )}
+          />
         </Switch>
       </BrowserRouter>
     );
