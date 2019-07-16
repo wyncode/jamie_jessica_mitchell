@@ -1,0 +1,17 @@
+#NavList{
+  width: 100%;
+  display: flex;
+  place-items: center;
+  text-decoration: none;
+  list-style-type: none;
+  width: 100%;
+  justify-content: center;
+
+}
+ 
+nav li {
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+

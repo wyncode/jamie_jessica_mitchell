@@ -1,23 +1,27 @@
-import React from 'react'
-import './App.css'
 
-class App extends React.Component {
-  state = { serverMessage: '' }
+import React from "react";
+import "./App.css";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import ShoppingList from "./pages/shoppinglist";
+import AboutUs from "./pages/about";
+import CreatePlan from "./pages/createplan";
+import MealPlan from "./pages/mealplan";
+import Navbar from "./Components/Navbar";
 
-  componentDidMount(){
-    fetch('/api/demo')
-      .then(response => response.json())
-      .then(data => this.setState({ serverMessage: data.message }))
-  }
+const App = () => {
+  return (
+    <BrowserRouter>
+      <Navbar />
+      <Switch>
+        <Route exact path="/" component={Home} />
+        <Route exact path="/about" component={AboutUs} />
+        <Route exact path="/createplan" component={CreatePlan} />
+        <Route exact path="/shoppinglist" component={ShoppingList} />
+        <Route exact path="/mealplan" component={MealPlan}/>
+      </Switch>
+    </BrowserRouter>
+  );
+};
 
-  render(){
-    return (
-      <div id="demo">
-        <h1>Hello from client/src/App.js</h1>
-        <h1>{this.state.serverMessage}</h1>
-      </div>
-    )
-  }
-}
-
-export default App
+export default App;
