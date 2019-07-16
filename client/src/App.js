@@ -3,19 +3,17 @@ import "./App.css";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import Home from "./pages/Home";
 
-import ShoppingList from "./pages/Shoppinglist";
+import ShoppingList from "./pages/ShoppingList";
 import AboutUs from "./pages/About";
-import CreatePlan from "./pages/Createplan";
-import MealPlan from "./pages/Mealplan";
+import CreatePlan from "./pages/CreatePlan";
+import MealPlan from "./pages/MealPlan";
 import Navbar from "./Components/Navbar";
 
 class App extends React.Component {
-  state = { userChoices: {} };
+  state = { recipes: [] };
 
-  updateChoice = (choice, value) => {
-    let choices = this.state.userChoices;
-    choices[choice] = value;
-    this.setState({ userChoices: choices });
+  updateRecipes = value => {
+    this.setState({ recipes: value });
   };
 
   render() {
@@ -29,7 +27,7 @@ class App extends React.Component {
             exact
             path="/createplan"
             render={props => (
-              <CreatePlan {...props} updateChoice={this.updateChoice} />
+              <CreatePlan {...props} updateRecipes={this.updateRecipes} />
             )}
           />
           <Route exact path="/shoppinglist" component={ShoppingList} />
@@ -37,7 +35,7 @@ class App extends React.Component {
             exact
             path="/mealplan"
             render={props => (
-              <MealPlan {...props} userChoices={this.state.userChoices} />
+              <MealPlan {...props} recipes={this.state.recipes} />
             )}
           />
         </Switch>

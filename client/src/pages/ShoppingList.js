@@ -1,7 +1,7 @@
 import React from "react";
 import "./shoppinglist.css";
 
-class shoppinglist extends React.Component {
+class ShoppingList extends React.Component {
   render() {
     return (
       <div id="shoppingList">

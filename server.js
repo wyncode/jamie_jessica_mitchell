@@ -16,28 +16,26 @@ const app = express();
 const port = process.env.port || 8080;
 
 // function getNutritionInfo() {
-app.get("/food", (request, response) => {
+app.post("/food", (request, response) => {
   // assign variables from inputs
-  // const nutrient = document.getElementById("nutrient_input").value;
-  // const quant = document.getElementById("quant_input").value;
-  // const food = document.getElementById("food_input").value;
-  const diet = "vegetarian";
-  const meal = "3";
-  const diet2 = "vegan";
+  console.log(request.body.iLike);
+  const { selectDiet, dontLike, iLike, calorieScale } = request.body;
+  let url = `https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/random?number=3&tags=${selectDiet}%4C${dontLike}%4C${iLike}%4C${calorieScale}`;
 
   unirest
-    .get(
-      `https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/random?number=3&tags=${diet}%3C${meal}%3C${diet2}`
-    )
+    .get(url)
     .header(
       "X-RapidAPI-Host",
       "spoonacular-recipe-food-nutrition-v1.p.rapidapi.com"
     )
     .header("X-RapidAPI-Key", `${process.env.SPOONACULAR_API_KEY}`)
     .end(function(result) {
+      console.log("*".repeat(30), "\n", result.body);
       const recipe = response.json(result.body);
-      result.body.recipes.forEach(rec => console.log(rec.vegetarian));
+      // result.body.recipes.forEach(rec => console.log(rec.vegetarian));
     });
 });
 
-app.listen(port);
+app.listen(port, () => {
+  console.log("Magic happening here... 🌈🦄");
+});

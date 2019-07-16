@@ -7,7 +7,6 @@ import unirest from "unirest";
 
 class CreatePlan extends React.Component {
   state = {
-    recipes: [],
     selectDiet: "none",
     dontLike: "",
     iLike: "",
@@ -17,9 +16,17 @@ class CreatePlan extends React.Component {
   //Form Submittion Functioon
   handleSubmit = event => {
     event.preventDefault();
-    unirest
-      .get(`/food`)
-      .then(response => this.setState({ recipes: response.data }));
+    let { selectDiet, dontLike, iLike, calorieScale } = this.state;
+    let body = JSON.stringify({ selectDiet, dontLike, iLike, calorieScale });
+    console.log(body);
+    fetch(`/food`, {
+      method: "POST",
+      body: body,
+      headers: { "Content-Type": "application/json" }
+    })
+      .then(res => res.json())
+      .then(response => this.props.updateRecipes(response.data))
+      .catch(err => console.log(err));
   };
 
   // onChange function for input options
@@ -29,7 +36,7 @@ class CreatePlan extends React.Component {
 
   //Render Function
   render() {
-    const { selectDiet, dontLike, calorieScale } = this.state;
+    const { selectDiet, dontLike, calorieScale, iLike } = this.state;
     return (
       <>
         <h1>Form</h1>
@@ -71,7 +78,7 @@ class CreatePlan extends React.Component {
               name="iLike"
               type="text"
               placeholder="eg. steak"
-              value={dontLike}
+              value={iLike}
               onChange={this.handleChange}
             />
           </div>

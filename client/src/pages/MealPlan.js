@@ -9,6 +9,9 @@ class MealPlan extends React.Component {
   render() {
     return (
       <div id="Meal Plan">
+        {this.props.recipes.map(recipe => (
+          <h1>We're awesome</h1>
+        ))}
         <h1 id="title">Meal Plan</h1>
         <table>
           <tr>
