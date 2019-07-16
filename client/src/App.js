@@ -8,19 +8,27 @@ import CreatePlan from "./pages/Createplan";
 import MealPlan from "./pages/Mealplan";
 import Navbar from "./Components/Navbar";
 
-const App = () => {
-  return (
-    <BrowserRouter>
-      <Navbar />
-      <Switch>
-        <Route exact path="/" component={Home} />
-        <Route exact path="/about" component={AboutUs} />
-        <Route exact path="/createplan" component={CreatePlan} />
-        <Route exact path="/shoppinglist" component={ShoppingList} />
-        <Route exact path="/mealplan" component={MealPlan} />
-      </Switch>
-    </BrowserRouter>
-  );
-};
+class App extends React.Component {
+  state = { userChoices: {} };
+  
+  updateChoice = (choice, value) => {
+    this.setState({ userChoices[choice]: value })
+  }
+
+  render() {
+    return (
+      <BrowserRouter>
+        <Navbar />
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route exact path="/about" component={AboutUs} />
+          <Route exact path="/createplan" render={ props => <CreatePlan {...props} updateChoice={this.updateChoice} />} />
+          <Route exact path="/shoppinglist" component={ShoppingList} />
+          <Route exact path="/mealplan" render={ props => <MealPlan {...props} userChoices={this.state.userChoices} />}/>
+        </Switch>
+      </BrowserRouter>
+    );
+  }
+}
 
 export default App;
