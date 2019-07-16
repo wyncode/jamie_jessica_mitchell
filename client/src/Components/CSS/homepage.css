@@ -1,0 +1,48 @@
+body {
+  background-image: url(background.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+}
+
+div{ 
+  border-radius: 12%;
+  display: grid;
+  place-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+#logo {
+  margin-top: 210px;
+}
+
+img {
+  width: 88%;
+  display: grid;
+  place-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+h3 {
+  font-size: 40px;
+  color: azure;
+  font-family:'Shadows Into Light', cursive;
+  margin: 0;
+}
+
+button{
+  width: 325px;
+  height: 50px;
+  border-radius: 5%;
+  color: blue;
+  background-color: azure;
+  font-family:'Shadows Into Light', cursive;
+  font-size: 20px;
+  cursor: pointer;
+  border: 2px solid gray;
+}
