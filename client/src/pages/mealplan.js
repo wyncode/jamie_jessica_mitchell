@@ -9,14 +9,10 @@ class MealPlan extends React.Component {
 
   render(){
    
-
-  
-
-
     return(
       <>
       <div id="Meal Plan">
-        <h1>Meal Plan</h1>
+        <h1 id="title">Meal Plan</h1>
         <table>
           <tr>
           <th></th>
