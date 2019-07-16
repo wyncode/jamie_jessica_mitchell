@@ -10,6 +10,7 @@ class CreatePlan extends React.Component {
     recipes: [],
     selectDiet: "none",
     dontLike: "",
+    iLike: "",
     calorieScale: "2500"
   };
 
@@ -88,10 +89,6 @@ class CreatePlan extends React.Component {
             />
             {calorieScale} calories per day
           </div>
-          {/* Alergy Selector
-          <div className="alergySelector">
-            <label htmlFor="cuisine">Allergies: </label>
-          </div> */}
           <div className="formbutton">
             <button>Submit</button>
           </div>
