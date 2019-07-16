@@ -19,7 +19,7 @@ const App = () => {
         <Route exact path="/createplan" component={CreatePlan} />
         <Route exact path="/shoppinglist" component={ShoppingList} />
         <Route exact path="/mealplan" component={MealPlan}/>
-        <Route exact path="/RecipeInfo" component ={RecipeInfo} />
+        <Route exact path="/recipe-info" component ={RecipeInfo} />
       </Switch>
     </BrowserRouter>
   );
