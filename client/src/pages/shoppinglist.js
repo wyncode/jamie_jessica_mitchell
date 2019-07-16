@@ -1,8 +1,6 @@
 import React from 'react'
-import "./shoppinglist.css"
-
+import "./CSS/shoppinglist.css"
 class shoppinglist extends React.Component {
-
   render(){
     return(
       <>
@@ -17,16 +15,14 @@ class shoppinglist extends React.Component {
         {/* <p>{}</p> */}
         <h3>Dairy</h3>
         {/* <p></p> */}
+
       </div>
       </div>
       </div>
-      
-        
+
+
       </>
     )
   }
 }
-
-
-
 export default shoppinglist;

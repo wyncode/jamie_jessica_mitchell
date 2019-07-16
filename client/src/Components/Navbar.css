@@ -6,12 +6,31 @@
   list-style-type: none;
   width: 100%;
   justify-content: center;
-
+  font-family: 'Josefin Sans', sans-serif;
+  height: 25px;
+  background: rgba(255,255,255,0.2);
+  
+  
 }
- 
-nav li {
+nav li  {
   margin-left: 100px;
   margin-right: 100px;
+
 }
+nav li:hover  {
+  text-decoration: underline;
+  cursor: pointer;
+  color: grey;
+}
+nav li a {
+      text-decoration: none;
+      color: #1f7a1f;
+}
+nav li a:hover {
+  color: grey;
+}
+
+
+
 
 

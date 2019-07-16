@@ -1,14 +1,13 @@
 #shoppingList{
   
   background-image: url("kisspng-standard-paper-size-clipboard-computer-icons-paper-clipboard-5ac29e57dbb9c1.4766074715227039599.png");
-  width: auto;
-  height:auto;
   display: grid;
   justify-content: center;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  
+  height:100%;
+  width: 400px;
   
 }
 
@@ -28,6 +27,7 @@
   text-align: center;
   font-family: 'PT Sans', sans-serif;
   color: #1f7a1f;
+  margin-top:175px;
 }
 
 
