@@ -11,11 +11,12 @@ class MealPlan extends React.Component {
    
     return(
       <>
+      <div id= "wrapper"> 
       <div id="MealPlan">
-        <h1>Meal Plan</h1>
+        <h1 id="title">Meal Plan</h1>
         <table>
           <tr>
-          <th></th>
+          <th ></th>
           <th>Monday</th>
           <th>Tuesday</th>
           <th>Wednesday</th>
@@ -56,6 +57,7 @@ class MealPlan extends React.Component {
         </tr>
         </table>
         
+        </div>
         </div>
 
       </>

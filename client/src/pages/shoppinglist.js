@@ -12,7 +12,9 @@ class shoppinglist extends React.Component {
   render(){
     return(
       <>
+      <div id="wrapper">
       <div id="shoppingList">
+      <div id="text-content">
       <h1>Shopping List</h1>
       {/* <img  /> */}
         <h3>Produce</h3>
@@ -21,8 +23,10 @@ class shoppinglist extends React.Component {
         {/* <p>{}</p> */}
         <h3>Dairy</h3>
         {/* <p></p> */}
-
       </div>
+      </div>
+      </div>
+      
         
       </>
     )

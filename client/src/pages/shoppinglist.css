@@ -1,5 +1,33 @@
 #shoppingList{
+  
+  background-image: url("kisspng-standard-paper-size-clipboard-computer-icons-paper-clipboard-5ac29e57dbb9c1.4766074715227039599.png");
+  width: auto;
+  height:auto;
+  display: grid;
+  justify-content: center;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+  
+}
+
+#wrapper{
+  background-image: url("Meal-plan-background.jpg"); opacity: 0.90; 
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display:grid;
+  place-items: center;
+}
+
+#text-content{
   display: grid;
   justify-content: center;
   text-align: center;
+  font-family: 'PT Sans', sans-serif;
+  color: #1f7a1f;
 }
+
+
