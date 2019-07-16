@@ -62,6 +62,18 @@ class CreatePlan extends React.Component {
               onChange={this.handleChange}
             />
           </div>
+          {/* Things You Like */}
+          <div className="iLikeSelector">
+            <label htmlFor="iLike">Likes: </label>
+            <input
+              id="iLike"
+              name="iLike"
+              type="text"
+              placeholder="eg. steak"
+              value={dontLike}
+              onChange={this.handleChange}
+            />
+          </div>
           {/* Calorie Scale */}
           <div className="calorieScale">
             <label htmlFor="calorieRange">Maximum Calories: </label>
