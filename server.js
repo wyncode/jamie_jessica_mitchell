@@ -23,7 +23,7 @@ app.use(parser.json());
 app.post("/food", (request, response) => {
   console.log(request.body);
   const { selectDiet, iLike } = request.body;
-  let url = `https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/random?number=21&tags=${selectDiet}%2C${iLike}`;
+  let url = `https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/random?number=2&tags=${selectDiet}%1C${iLike}`;
 
   unirest
     .get(url)
@@ -34,12 +34,10 @@ app.post("/food", (request, response) => {
     .header("X-RapidAPI-Key", `${process.env.SPOONACULAR_API_KEY}`)
     .end(function(result) {
       console.log("*".repeat(30), "\n", result.body);
-      const recipe = response.json(result.body);
+      response.json(result.body);
     });
 });
 
 app.listen(port, () => {
-  console.log(`Magic happening here ------------------------  🌈🦄`);
+  console.log("Magic happening here...------------------------ 🌈🦄");
 });
-
-//`yarn start` to initialize the backend

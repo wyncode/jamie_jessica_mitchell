@@ -14,7 +14,6 @@
   display: grid;
   place-items: center;
   text-align: center;
-  grid-template-columns: ;
 }
 
 #createPlanForm h1 {
@@ -39,7 +38,6 @@
   padding: 0;
 }
 .labels {
-  color: red;
   font-family: "Josefin Sans", sans-serif;
 }
 #formButton:hover {

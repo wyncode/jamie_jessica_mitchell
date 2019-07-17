@@ -17,14 +17,16 @@ class CreatePlan extends React.Component {
     event.preventDefault();
     let { selectDiet, iLike } = this.state;
     let body = JSON.stringify({ selectDiet, iLike });
-    // console.log(body)
     fetch(`/food`, {
       method: "POST",
       body: body,
       headers: { "Content-Type": "application/json" }
     })
       .then(res => res.json())
-      .then(response => this.props.updateRecipes(response.data))
+      .then(recipes => {
+        this.props.updateRecipes(recipes.recipes);
+        this.props.history.push("/mealplan");
+      })
       .catch(err => console.log(err));
   };
 
@@ -36,6 +38,7 @@ class CreatePlan extends React.Component {
   //Render Function
   render() {
     const { selectDiet, iLike } = this.state;
+    console.log("HEY!!!!", this.props);
     return (
       <div id="formBody">
         <div id="createPlanForm">
