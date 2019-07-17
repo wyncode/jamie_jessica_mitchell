@@ -1,43 +1,34 @@
-table,
-th,
-td {
-  /* border: 1px solid black; */
-  color: #1f7a1f;
-}
-#title {
-  font-family: "PT Sans", sans-serif;
-  text-align: center;
-  font-size: 50px;
-  color: #1f7a1f;
-  margin: 0;
-}
-th,
-tr {
-  font-size: 20px;
-}
-tr {
-  border: black;
-}
-
-table {
-  width: 75%;
-  font-family: "PT Sans", sans-serif;
-  background: transparent;
-  text-align: center;
-  height: 400px;
-  margin: 0;
-}
-
-#mealWrapper {
-  /* background-image: url("Meal-plan-background.jpg"); */
-  opacity: 0.9;
-  height: 100vh;
-  background-position: center;
-  background-repeat: no-repeat;
+#meal_plan {
+  background-image: url(https://previews.123rf.com/images/vicushka/vicushka1511/vicushka151100033/48413260-salmon-fish-fillets-on-cutting-board-and-fresh-ingredients-for-cooking-on-rustic-background-top-view.jpg);
   background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  height: 93vh;
 }
-#MealPlan {
+
+#title {
+  font-family: "Shadows Into Light", cursive;
+  text-align: center;
+  font-size: 60px;
+  color:azure;
+  padding: 45px;
+}
+
+#blurb {
+  font-family: "Shadows Into Light", cursive;
+  text-align: center;
+  font-size: 30px;
+  color:azure;
+  background-color: black;
+  margin-bottom: 0;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 5rem;
   display: grid;
   place-items: center;
-  height: 100%;
 }
