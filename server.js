@@ -14,7 +14,7 @@ const app = express();
 
 //assign BE to port 8080
 //linked to front end with a proxy. see package.json file
-const port = process.env.port || 8080;
+const port = process.env.PORT || 8080;
 
 //middleware parses the JSON data and acts as a bridge between OS and data
 app.use(parser.json());
