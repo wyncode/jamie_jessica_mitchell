@@ -1,61 +1,54 @@
-#formBody {
-  background-image: url("https://image.freepik.com/free-photo/food-background-food-concept-with-various-tasty-fresh-ingredients-cooking-italian-food-ingredients-view-from-with-copy-space_1220-1375.jpg");
+#formWrapper {
+  background-image: url("../Photos/formBackground.jpg");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
   background-repeat: no-repeat;
   margin: 0;
   padding: 0;
-  height: 93vh;
+  height: 94vh;
 }
 
-#formTitle{
-  font-family: "Shadows Into Light", cursive;
-  margin-bottom: 100px;
-  margin-top: 50px;
-  font-size: 50px;
-}
-
-
-
-#createPlanForm {
+#formBody {
   z-index: 1;
   display: grid;
-  place-items: center;
+  place-items: start;
   text-align: center;
+  margin-left: 5%;
 }
 
-#createPlanForm h1 {
+#formTitle {
+  font-family: "Shadows Into Light", cursive;
+  margin: 3.5rem 0 3rem 0;
+  font-size: 50px;
+  font-weight: bold;
   color: whitesmoke;
 }
 
-#formElement {
-  height: 4rem;
-  
-}
-.formElement{
-  display: flex;
+.formElement {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin-top: 1rem;
+  width: 17rem;
 }
 
-.formElement label{
-  color:white;
-  margin-right: 100px;
+.formElement label {
+  color: white;
   font-family: "Shadows Into Light", cursive;
   font-size: 20px;
-
 }
 
 #submitButton {
-  margin-top: 100px;
+  margin-top: 5rem;
   background-color: white;
   opacity: 0.75;
-  width: 75px;
-  font-family:"Shadows Into Light", cursive;
+  width: 10rem;
+  font-family: "Shadows Into Light", cursive;
 }
 
-#submitButton:hover{
+#submitButton:hover {
   background-color: green;
-  color: white;
+  color: whitesmoke;
 }
 
 #formButton {

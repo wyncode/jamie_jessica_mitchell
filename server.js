@@ -31,7 +31,9 @@ app.post("/food", (request, response) => {
       "X-RapidAPI-Host",
       "spoonacular-recipe-food-nutrition-v1.p.rapidapi.com"
     )
-    .header("X-RapidAPI-Key", "")
+
+    .header("X-RapidAPI-Key", `${process.env.SPOONACULAR_API_KEY}`)
+
     .end(function(result) {
       console.log("*".repeat(30), "\n", result.body);
       response.json(result.body);
