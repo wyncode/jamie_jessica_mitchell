@@ -43,7 +43,7 @@ class CreatePlan extends React.Component {
     return (
       <div id="formWrapper">
         <div id="formBody">
-          <h1 id="formTitle">Let's Starting Cookin'!</h1>
+          <h1 id="formTitle">Let's Start Cookin'!</h1>
           <form onSubmit={this.handleSubmit}>
             {/* Select Diet */}
             <div className="formElement">
