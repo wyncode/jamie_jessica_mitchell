@@ -32,8 +32,6 @@
 }
 
 .mainButton {
-  width: 325px;
-  height: 55px;
   border-radius: 5%;
   color: blue;
   text-emphasis-style: bold;
@@ -42,7 +40,11 @@
   font-size: 20px;
   cursor: pointer;
   border: 2px solid gray;
-  padding: 0;
+  padding: 15px;
+  border-radius: 15px;
+}
+a.mainButton {
+  text-decoration: none;
 }
 
 #homeButton {
@@ -52,9 +54,10 @@
   height: 100px;
 }
 #homeButton:hover {
-  transform: scale(1.02);
+  transform: scale(1.08);
 }
-#button a {
+
+a {
   text-decoration: none;
   color: blue;
   text-emphasis-style: bold;

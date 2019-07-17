@@ -7,9 +7,7 @@ const Home = () => (
       <img class="logo" src="/images/Picture1.png" alt="Logo" />
       <h3 id="homeHeader">Looking to learn more about nutrition?</h3>
       <div id="homeButton">
-        <button className="mainButton">
-          Get your personalized meal plan here!
-        </button>
+          <a className="mainButton" href="/createplan">Get your personalized meal plan here!</a>   
       </div>
     </div>
   </div>
