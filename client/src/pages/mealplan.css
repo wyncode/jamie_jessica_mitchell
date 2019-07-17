@@ -19,6 +19,18 @@ body{
 
 
 *{
-  font-family: sans-serif;
+  font-family: "Shadows Into Light", cursive;
+  font-size: 20px;
   color: white;
+}
+
+.card:hover{
+  border: 2px solid grey;
+}
+
+#blurb {
+  text-align: center;
+  font-family: "Shadows Into Light", cursive;
+  color: green;
+  font-size: 20px;
 }
