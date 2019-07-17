@@ -1,21 +1,19 @@
 import React from "react";
-import "./mealplan.css";
+import "../Components/CSS/mealplan.css";
 // import unirest from 'unirest'
 // import { Link } from 'react-router-dom'
 
 class MealPlan extends React.Component {
-  state = {recipes: []};
+  state = { recipes: [] };
 
   render() {
     return (
       <div id="Meal Plan">
         <h1 id="title">Meal Plan</h1>
-        {
-          this.props.recipes.map(recipe => {
-            console.log(recipe)
-            return <div>{recipe.title}</div>
-          })
-        }
+        {this.props.recipes.map(recipe => {
+          console.log(recipe);
+          return <div>{recipe.title}</div>;
+        })}
         <table>
           <tr>
             <th />

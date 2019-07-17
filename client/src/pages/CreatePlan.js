@@ -1,4 +1,5 @@
 import React from "react";
+import "../Components/CSS/form.css";
 // import unirest from "unirest";
 
 //CreatePlan Form Component
@@ -23,12 +24,11 @@ class CreatePlan extends React.Component {
     })
       .then(res => res.json())
       .then(recipes => {
-        this.props.updateRecipes(recipes.recipes)
-        this.props.history.push("/mealplan")
+        this.props.updateRecipes(recipes.recipes);
+        this.props.history.push("/mealplan");
       })
       .catch(err => console.log(err));
   };
-
 
   // onChange function for input options
   handleChange = event => {
@@ -38,30 +38,34 @@ class CreatePlan extends React.Component {
   //Render Function
   render() {
     const { selectDiet, iLike } = this.state;
-    console.log("HEY!!!!", this.props)
+    console.log("HEY!!!!", this.props);
     return (
-      <>
-        <h1>Form</h1>
-        <form id="createPlanForm" onSubmit={this.handleSubmit}>
-          {/* Select Diet */}
-          <div className="dietSelector">
-            <label htmlFor="selectDiet">Diet Options: </label>
-            <select
-              id="selectDiet"
-              name="selectDiet"
-              value={selectDiet}
-              onChange={this.handleChange}
-            >
-              <option value="choose">Choose One...</option>
-              <option value="vegan">Vegan</option>
-              <option value="vegetarian">Vegetarian (Lacto and Ovo)</option>
-              <option value="paleo">Paleo</option>
-              <option value="ketogenic">Ketogenic</option>
-              <option value="primal">Primal</option>
-            </select>
-          </div>
-          {/* Things You Don't Like */}
-          {/* <div className="dontLikeSelector">
+      <div id="formBody">
+        <div id="createPlanForm">
+          <h1>Form</h1>
+          <form onSubmit={this.handleSubmit}>
+            {/* Select Diet */}
+            <div className="innerForm">
+              <div className="formElement">
+                <label className="labels" htmlFor="selectDiet">
+                  Diet Options:{" "}
+                </label>
+                <select
+                  id="selectDiet"
+                  name="selectDiet"
+                  value={selectDiet}
+                  onChange={this.handleChange}
+                >
+                  <option value="choose">Choose One...</option>
+                  <option value="vegan">Vegan</option>
+                  <option value="vegetarian">Vegetarian (Lacto and Ovo)</option>
+                  <option value="paleo">Paleo</option>
+                  <option value="ketogenic">Ketogenic</option>
+                  <option value="primal">Primal</option>
+                </select>
+              </div>
+              {/* Things You Don't Like */}
+              {/* <div className="dontLikeSelector">
             <label htmlFor="dontLike">Dislikes: </label>
             <input
               id="dontLike"
@@ -71,38 +75,26 @@ class CreatePlan extends React.Component {
               value={dontLike}
               onChange={this.handleChange}
             />
-          </div> */}
-          {/* Things You Like */}
-          <div className="iLikeSelector">
-            <label htmlFor="iLike">Likes: </label>
-            <input
-              id="iLike"
-              name="iLike"
-              type="text"
-              placeholder="eg. steak"
-              value={iLike}
-              onChange={this.handleChange}
-            />
-          </div>
-          {/* Calorie Scale */}
-          {/* <div className="calorieScale">
-            <label htmlFor="calorieRange">Maximum Calories: </label>
-            <input
-              id="calorieRange"
-              name="calorieScale"
-              type="range"
-              min="1800"
-              max="5000"
-              value={calorieScale}
-              onChange={this.handleChange}
-            />
-            {calorieScale} calories per day
-          </div> */}
-          <div className="formbutton">
-            <button type="submit">Submit</button>
-          </div>
-        </form>
-      </>
+            </div> */}
+              {/* Things You Like */}
+              <div className="formElement">
+                <label className="labels" htmlFor="iLike">
+                  Likes:{" "}
+                </label>
+                <input
+                  id="iLike"
+                  name="iLike"
+                  type="text"
+                  placeholder="eg. steak"
+                  value={iLike}
+                  onChange={this.handleChange}
+                />
+              </div>
+              <button id="formButton">Submit</button>
+            </div>
+          </form>
+        </div>
+      </div>
     );
   }
 }

@@ -1,0 +1,45 @@
+#formBody {
+  background-image: url("https://image.freepik.com/free-photo/food-background-food-concept-with-various-tasty-fresh-ingredients-cooking-italian-food-ingredients-view-from-with-copy-space_1220-1375.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  height: 93vh;
+}
+
+#createPlanForm {
+  z-index: 1;
+  display: grid;
+  place-items: center;
+  text-align: center;
+}
+
+#createPlanForm h1 {
+  color: whitesmoke;
+}
+
+#formElement {
+  height: 4rem;
+}
+
+#formButton {
+  width: 325px;
+  height: 55px;
+  border-radius: 5%;
+  color: blue;
+  text-emphasis-style: bold;
+  background-color: azure;
+  font-family: "Shadows Into Light", cursive;
+  font-size: 20px;
+  cursor: pointer;
+  border: 2px solid gray;
+  padding: 0;
+}
+.labels {
+  font-family: "Josefin Sans", sans-serif;
+}
+#formButton:hover {
+  transform: scale(1.02);
+}

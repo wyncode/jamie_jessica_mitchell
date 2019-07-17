@@ -1,3 +1,40 @@
+<<<<<<< HEAD
+#shoppingList {
+  background-image: url("../Photos/clipboard.png");
+  display: grid;
+  justify-content: center;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  width: 400px;
+}
+
+#listWrapper {
+  background-image: url("../Photos/Meal-plan-background.jpg");
+  opacity: 0.9;
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: grid;
+  place-items: center;
+}
+
+#text-content {
+  display: grid;
+  justify-content: center;
+  text-align: center;
+  font-family: "PT Sans", sans-serif;
+  color: #1f7a1f;
+  margin-top: 175px;
+}
+#shoppingList {
+  display: grid;
+  justify-content: center;
+  text-align: center;
+}
+=======
 #GroceryList{
   display: grid;
   justify-content: center;
@@ -50,3 +87,4 @@
 
 }
 
+>>>>>>> master

@@ -1,0 +1,27 @@
+#navList {
+  display: grid;
+  place-items: center;
+  grid-template-columns: repeat(5, 1fr);
+  text-decoration: none;
+  list-style-type: none;
+  width: 100%;
+  justify-content: center;
+  font-family: "Josefin Sans", sans-serif;
+  height: 50px;
+  z-index: 2;
+  padding: 0;
+  background-color: rgba(236, 236, 236, 0.897);
+  margin: 0;
+}
+#navList li {
+  margin: 3rem, auto;
+}
+#navList li a:hover {
+  /* text-decoration: underline; */
+  cursor: pointer;
+  color: lightgrey;
+}
+#navList li a {
+  text-decoration: none;
+  color: #1f7a1f;
+}
