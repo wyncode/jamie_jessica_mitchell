@@ -1,5 +1,5 @@
 import React from "react";
-import "./shoppinglist.css";
+import "../Components/CSS/shoppinglist.css";
 
 class ShoppingList extends React.Component {
   render() {

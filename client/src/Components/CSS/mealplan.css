@@ -1,0 +1,43 @@
+table,
+th,
+td {
+  /* border: 1px solid black; */
+  color: #1f7a1f;
+}
+#title {
+  font-family: "PT Sans", sans-serif;
+  text-align: center;
+  font-size: 50px;
+  color: #1f7a1f;
+  margin: 0;
+}
+th,
+tr {
+  font-size: 20px;
+}
+tr {
+  border: black;
+}
+
+table {
+  width: 75%;
+  font-family: "PT Sans", sans-serif;
+  background: transparent;
+  text-align: center;
+  height: 400px;
+  margin: 0;
+}
+
+#mealWrapper {
+  /* background-image: url("Meal-plan-background.jpg"); */
+  opacity: 0.9;
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#MealPlan {
+  display: grid;
+  place-items: center;
+  height: 100%;
+}

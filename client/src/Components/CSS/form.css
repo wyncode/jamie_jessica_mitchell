@@ -1,5 +1,5 @@
-#wrapper {
-  background-image: url(/images/background.jpg);
+#formBody {
+  background-image: url("https://image.freepik.com/free-photo/food-background-food-concept-with-various-tasty-fresh-ingredients-cooking-italian-food-ingredients-view-from-with-copy-space_1220-1375.jpg");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -9,29 +9,23 @@
   height: 93vh;
 }
 
-.logo {
-  border-radius: 12%;
+#createPlanForm {
+  z-index: 1;
   display: grid;
   place-items: center;
-  width: 88%;
-  margin: 0;
-  padding: 0;
+  text-align: center;
+  grid-template-columns: ;
 }
 
-/* #logo {
-  margin-top: 110px;
-} */
-
-#homeHeader {
-  font-size: 40px;
-  color: azure;
-  font-family: "Shadows Into Light", cursive;
-  margin: 0;
-  display: grid;
-  place-items: center;
+#createPlanForm h1 {
+  color: whitesmoke;
 }
 
-.mainButton {
+#formElement {
+  height: 4rem;
+}
+
+#formButton {
   width: 325px;
   height: 55px;
   border-radius: 5%;
@@ -44,13 +38,10 @@
   border: 2px solid gray;
   padding: 0;
 }
-
-#homeButton {
-  display: grid;
-  place-items: center;
-  margin-top: 3rem;
-  height: 100px;
+.labels {
+  color: red;
+  font-family: "Josefin Sans", sans-serif;
 }
-#homeButton:hover {
+#formButton:hover {
   transform: scale(1.02);
 }
