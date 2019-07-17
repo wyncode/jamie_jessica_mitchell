@@ -1,4 +1,8 @@
-body {
+html{
+  margin: 0;
+}
+
+  div {
   background-image: url(/images/background.jpg);
   background-size: cover;
   background-position: center;
@@ -6,26 +10,20 @@ body {
   background-repeat: no-repeat;
   margin: 0;
   padding: 0;
+  height: 100vh;
 }
 
-div{ 
+img { 
   border-radius: 12%;
   display: grid;
   place-items: center;
+  width: 88%;
   margin: 0;
   padding: 0;
 }
 
 #logo {
-  margin-top: 210px;
-}
-
-img {
-  width: 88%;
-  display: grid;
-  place-items: center;
-  margin: 0;
-  padding: 0;
+  margin-top: 110px;
 }
 
 h3 {
@@ -33,16 +31,26 @@ h3 {
   color: azure;
   font-family:'Shadows Into Light', cursive;
   margin: 0;
+  display: grid;
+  place-items: center;
 }
 
 button{
   width: 325px;
-  height: 50px;
+  height: 55px;
   border-radius: 5%;
   color: blue;
+  text-emphasis-style: bold;
   background-color: azure;
   font-family:'Shadows Into Light', cursive;
   font-size: 20px;
   cursor: pointer;
   border: 2px solid gray;
+  padding: 0;
+}
+
+#button {
+  display: grid;
+  place-items: center;
+  height: 100px;
 }
