@@ -16,7 +16,6 @@ class CreatePlan extends React.Component {
     event.preventDefault();
     let { selectDiet, iLike } = this.state;
     let body = JSON.stringify({ selectDiet, iLike });
-    // console.log(body)
     fetch(`/food`, {
       method: "POST",
       body: body,
@@ -24,8 +23,8 @@ class CreatePlan extends React.Component {
     })
       .then(res => res.json())
       .then(recipes => {
-        this.props.updateRecipes(recipes.body)
-
+        this.props.updateRecipes(recipes.recipes)
+        this.props.history.push("/mealplan")
       })
       .catch(err => console.log(err));
   };
@@ -100,13 +99,7 @@ class CreatePlan extends React.Component {
             {calorieScale} calories per day
           </div> */}
           <div className="formbutton">
-            <button>
-              <a href="/MealPlan" 
-                target="_blank">
-              >
-                Submit
-              </a>
-            </button>
+            <button type="submit">Submit</button>
           </div>
         </form>
       </>
