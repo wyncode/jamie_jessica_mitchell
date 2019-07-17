@@ -4,15 +4,18 @@ import "./mealplan.css";
 // import { Link } from 'react-router-dom'
 
 class MealPlan extends React.Component {
-  state = {};
+  state = {recipes: []};
 
   render() {
     return (
       <div id="Meal Plan">
-        {this.props.recipes.map(recipe => (
-          <h1>We're awesome</h1>
-        ))}
         <h1 id="title">Meal Plan</h1>
+        {
+          this.props.recipes.map(recipe => {
+            console.log(recipe)
+            return <div>{recipe.title}</div>
+          })
+        }
         <table>
           <tr>
             <th />

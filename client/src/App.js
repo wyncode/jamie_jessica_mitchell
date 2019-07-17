@@ -4,7 +4,7 @@ import { BrowserRouter, Switch, Route } from "react-router-dom";
 import Home from "./pages/Home";
 
 import ShoppingList from "./pages/ShoppingList";
-import AboutUs from "./pages/About";
+import AboutUs from "./pages/about";
 import CreatePlan from "./pages/CreatePlan";
 import MealPlan from "./pages/MealPlan";
 import Navbar from "./Components/Navbar";
@@ -22,7 +22,7 @@ class App extends React.Component {
         <Navbar />
         <Switch>
           <Route exact path="/" component={Home} />
-          <Route exact path="/about" component={AboutUs} />
+          <Route exact path="/About" component={AboutUs} />
           <Route
             exact
             path="/createplan"

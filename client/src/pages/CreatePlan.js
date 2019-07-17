@@ -16,16 +16,19 @@ class CreatePlan extends React.Component {
     event.preventDefault();
     let { selectDiet, iLike } = this.state;
     let body = JSON.stringify({ selectDiet, iLike });
-    // console.log(body)
     fetch(`/food`, {
       method: "POST",
       body: body,
       headers: { "Content-Type": "application/json" }
     })
       .then(res => res.json())
-      .then(response => this.props.updateRecipes(response.data))
+      .then(recipes => {
+        this.props.updateRecipes(recipes.recipes)
+        this.props.history.push("/mealplan")
+      })
       .catch(err => console.log(err));
   };
+
 
   // onChange function for input options
   handleChange = event => {
@@ -35,6 +38,7 @@ class CreatePlan extends React.Component {
   //Render Function
   render() {
     const { selectDiet, iLike } = this.state;
+    console.log("HEY!!!!", this.props)
     return (
       <>
         <h1>Form</h1>
@@ -95,7 +99,7 @@ class CreatePlan extends React.Component {
             {calorieScale} calories per day
           </div> */}
           <div className="formbutton">
-            <button>Submit</button>
+            <button type="submit">Submit</button>
           </div>
         </form>
       </>
