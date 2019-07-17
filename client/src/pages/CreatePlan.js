@@ -9,14 +9,16 @@ import "../Components/CSS/form.css";
 class CreatePlan extends React.Component {
   state = {
     selectDiet: "none",
+    selectMeal: "",
     iLike: ""
+
   };
 
   //Form Submittion Functioon
   handleSubmit = event => {
     event.preventDefault();
-    let { selectDiet, iLike } = this.state;
-    let body = JSON.stringify({ selectDiet, iLike });
+    let { selectDiet, iLike, selectMeal } = this.state;
+    let body = JSON.stringify({ selectDiet, iLike, selectMeal });
     fetch(`/food`, {
       method: "POST",
       body: body,
@@ -37,17 +39,17 @@ class CreatePlan extends React.Component {
 
   //Render Function
   render() {
-    const { selectDiet, iLike } = this.state;
+    const { selectDiet, iLike, selectMeal } = this.state;
     console.log("HEY!!!!", this.props);
     return (
       <div id="formBody">
         <div id="createPlanForm">
-          <h1>Form</h1>
+          <h1 id="formTitle">Let's Starting Cookin'!</h1>
           <form onSubmit={this.handleSubmit}>
             {/* Select Diet */}
+           <div className="formElement">
             <div className="innerForm">
-              <div className="formElement">
-                <label className="labels" htmlFor="selectDiet">
+                <label class="col-sm-2 col-form-label" htmlFor="selectDiet">
                   Diet Options:{" "}
                 </label>
                 <select
@@ -55,6 +57,7 @@ class CreatePlan extends React.Component {
                   name="selectDiet"
                   value={selectDiet}
                   onChange={this.handleChange}
+                  className="form-control"
                 >
                   <option value="choose">Choose One...</option>
                   <option value="vegan">Vegan</option>
@@ -64,33 +67,42 @@ class CreatePlan extends React.Component {
                   <option value="primal">Primal</option>
                 </select>
               </div>
-              {/* Things You Don't Like */}
-              {/* <div className="dontLikeSelector">
-            <label htmlFor="dontLike">Dislikes: </label>
-            <input
-              id="dontLike"
-              name="dontLike"
-              type="text"
-              placeholder="eg. squash, cantaloupe"
-              value={dontLike}
-              onChange={this.handleChange}
-            />
-            </div> */}
+              {/* Meal Select */}
+              <div className="formElement">
+              <label class="col-sm-2 col-form-label" htmlFor="selectMeal">
+                  Meal Options:{" "}
+                </label>
+                <select
+                  id="selectMeal"
+                  name="selectMeal"
+                  value={selectMeal}
+                  onChange={this.handleChange}
+                  className="form-control"
+                >
+                  <option value="choose">Choose One...</option>
+                  <option value="breakfast">Breakfast</option>
+                  <option value="lunch">Lunch</option>
+                  <option value="dinner">Dinner</option>
+                  <option value="dessert">Dessert</option>
+                  <option value="snack">Snack</option>
+                </select>
+              </div>
               {/* Things You Like */}
               <div className="formElement">
-                <label className="labels" htmlFor="iLike">
+                <label class="col-sm-2 col-form-label" htmlFor="iLike">
                   Likes:{" "}
                 </label>
                 <input
                   id="iLike"
                   name="iLike"
                   type="text"
-                  placeholder="eg. steak"
+                  placeholder="spinach, tofu, kale...."
                   value={iLike}
                   onChange={this.handleChange}
+                  className="form-control"
                 />
               </div>
-              <button id="formButton">Submit</button>
+              <button id="submitButton"className="btn btn-outline-success">Submit</button>
             </div>
           </form>
         </div>

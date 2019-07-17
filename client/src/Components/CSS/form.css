@@ -9,6 +9,15 @@
   height: 93vh;
 }
 
+#formTitle{
+  font-family: "Shadows Into Light", cursive;
+  margin-bottom: 100px;
+  margin-top: 50px;
+  font-size: 50px;
+}
+
+
+
 #createPlanForm {
   z-index: 1;
   display: grid;
@@ -22,6 +31,31 @@
 
 #formElement {
   height: 4rem;
+  
+}
+.formElement{
+  display: flex;
+}
+
+.formElement label{
+  color:white;
+  margin-right: 100px;
+  font-family: "Shadows Into Light", cursive;
+  font-size: 20px;
+
+}
+
+#submitButton {
+  margin-top: 100px;
+  background-color: white;
+  opacity: 0.75;
+  width: 75px;
+  font-family:"Shadows Into Light", cursive;
+}
+
+#submitButton:hover{
+  background-color: green;
+  color: white;
 }
 
 #formButton {

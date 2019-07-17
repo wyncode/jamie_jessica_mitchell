@@ -22,8 +22,8 @@ app.use(parser.json());
 //connects our API request from CreatePlan.js to the API URL
 app.post("/food", (request, response) => {
   console.log(request.body);
-  const { selectDiet, iLike } = request.body;
-  let url = `https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/random?number=2&tags=${selectDiet}%1C${iLike}`;
+  const { selectDiet, iLike, selectMeal } = request.body;
+  let url = `https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/random?number=7&tags=${selectDiet}%3C${iLike}%3C${selectMeal}`;
 
   unirest
     .get(url)
@@ -31,7 +31,7 @@ app.post("/food", (request, response) => {
       "X-RapidAPI-Host",
       "spoonacular-recipe-food-nutrition-v1.p.rapidapi.com"
     )
-    .header("X-RapidAPI-Key", `${process.env.SPOONACULAR_API_KEY}`)
+    .header("X-RapidAPI-Key", `${process.env.SPOONACULAR_APIKEY}`)
     .end(function(result) {
       console.log("*".repeat(30), "\n", result.body);
       response.json(result.body);
