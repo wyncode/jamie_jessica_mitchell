@@ -36,11 +36,11 @@ class CreatePlan extends React.Component {
   render() {
     const { selectDiet, iLike } = this.state;
     return (
-      <>
+      <div id="createPlanForm">
         <h1>Form</h1>
-        <form id="createPlanForm" onSubmit={this.handleSubmit}>
+        <form onSubmit={this.handleSubmit}>
           {/* Select Diet */}
-          <div className="dietSelector">
+          <div className="innerForm">
             <label htmlFor="selectDiet">Diet Options: </label>
             <select
               id="selectDiet"
@@ -55,9 +55,9 @@ class CreatePlan extends React.Component {
               <option value="ketogenic">Ketogenic</option>
               <option value="primal">Primal</option>
             </select>
-          </div>
-          {/* Things You Don't Like */}
-          {/* <div className="dontLikeSelector">
+
+            {/* Things You Don't Like */}
+            {/* <div className="dontLikeSelector">
             <label htmlFor="dontLike">Dislikes: </label>
             <input
               id="dontLike"
@@ -67,9 +67,9 @@ class CreatePlan extends React.Component {
               value={dontLike}
               onChange={this.handleChange}
             />
-          </div> */}
-          {/* Things You Like */}
-          <div className="iLikeSelector">
+            </div> */}
+            {/* Things You Like */}
+
             <label htmlFor="iLike">Likes: </label>
             <input
               id="iLike"
@@ -79,9 +79,9 @@ class CreatePlan extends React.Component {
               value={iLike}
               onChange={this.handleChange}
             />
-          </div>
-          {/* Calorie Scale */}
-          {/* <div className="calorieScale">
+
+            {/* Calorie Scale */}
+            {/* <div className="calorieScale">
             <label htmlFor="calorieRange">Maximum Calories: </label>
             <input
               id="calorieRange"
@@ -93,12 +93,11 @@ class CreatePlan extends React.Component {
               onChange={this.handleChange}
             />
             {calorieScale} calories per day
-          </div> */}
-          <div className="formbutton">
+            </div> */}
             <button>Submit</button>
           </div>
         </form>
-      </>
+      </div>
     );
   }
 }
