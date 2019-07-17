@@ -1,4 +1,3 @@
-
 #GroceryList {
   display: grid;
   grid-template-columns: 1fr;
@@ -15,30 +14,31 @@
 }
 
 #GroceryListTitle {
-
-  margin-top: 50px;
-  margin-bottom: 50px;
+  margin-top: 30px;
+  margin-bottom: 30px;
   font-family: "Shadows Into Light", cursive;
   font-size: 75px;
   text-align: center;
   color: green;
 }
 
-
 #GroceryListTable {
-  background-color: whitesmoke;
+  background-color: rgb(230, 230, 230);
   border: solid 2px rgb(226, 226, 226);
-
+  display: block;
   opacity: 0.75;
   color: green;
   display: grid;
   justify-items: center;
   margin-bottom: 1.5rem;
+  min-width: 40rem;
+  min-height: 30rem;
 }
 
 #GroceryListTable tr td {
   font-family: "Shadows Into Light", cursive;
   padding-top: 10px;
+  font-size: 25px;
 }
 #GroceryListTable tr {
   font-family: "Shadows Into Light", cursive;
@@ -55,17 +55,17 @@
   border-radius: 20%;
   font-family: "Shadows Into Light", cursive;
   font-weight: bold;
+  font-size: 20px;
 }
 .groceryButton {
   cursor: pointer;
   text-align: left;
   width: 100px;
   text-align: center;
-  margin-left: 30px;
+  margin-left: 300px;
 }
 .groceryButton:hover {
   color: white;
   font-family: "Shadows Into Light", cursive;
   background-color: green;
 }
-
