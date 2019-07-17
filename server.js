@@ -9,18 +9,22 @@ if (process.env.NODE_ENV !== "production") {
 }
 
 const unirest = require("unirest");
+const parser = require("body-parser");
 const express = require("express");
 const app = express();
 
 //assign a port
 const port = process.env.port || 8080;
 
+//middlework
+app.use(parser.json());
+
 // function getNutritionInfo() {
 app.post("/food", (request, response) => {
   // assign variables from inputs
-  console.log(request.body.iLike);
-  const { selectDiet, dontLike, iLike, calorieScale } = request.body;
-  let url = `https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/random?number=3&tags=${selectDiet}%4C${dontLike}%4C${iLike}%4C${calorieScale}`;
+  console.log(request.body);
+  const { selectDiet, iLike } = request.body;
+  let url = `https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/random?number=21&tags=${selectDiet}%2C${iLike}`;
 
   unirest
     .get(url)
@@ -37,5 +41,5 @@ app.post("/food", (request, response) => {
 });
 
 app.listen(port, () => {
-  console.log("Magic happening here... 🌈🦄");
+  console.log("Magic happening here...------------------------ 🌈🦄");
 });

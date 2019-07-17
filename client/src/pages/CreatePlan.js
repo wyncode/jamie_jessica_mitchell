@@ -1,5 +1,5 @@
 import React from "react";
-import unirest from "unirest";
+// import unirest from "unirest";
 
 //CreatePlan Form Component
 //Diet types, foods you don't like, health level, meals per day
@@ -8,17 +8,15 @@ import unirest from "unirest";
 class CreatePlan extends React.Component {
   state = {
     selectDiet: "none",
-    dontLike: "",
-    iLike: "",
-    calorieScale: "2500"
+    iLike: ""
   };
 
   //Form Submittion Functioon
   handleSubmit = event => {
     event.preventDefault();
-    let { selectDiet, dontLike, iLike, calorieScale } = this.state;
-    let body = JSON.stringify({ selectDiet, dontLike, iLike, calorieScale });
-    console.log(body);
+    let { selectDiet, iLike } = this.state;
+    let body = JSON.stringify({ selectDiet, iLike });
+    // console.log(body)
     fetch(`/food`, {
       method: "POST",
       body: body,
@@ -36,7 +34,7 @@ class CreatePlan extends React.Component {
 
   //Render Function
   render() {
-    const { selectDiet, dontLike, calorieScale, iLike } = this.state;
+    const { selectDiet, iLike } = this.state;
     return (
       <>
         <h1>Form</h1>
@@ -59,7 +57,7 @@ class CreatePlan extends React.Component {
             </select>
           </div>
           {/* Things You Don't Like */}
-          <div className="dontLikeSelector">
+          {/* <div className="dontLikeSelector">
             <label htmlFor="dontLike">Dislikes: </label>
             <input
               id="dontLike"
@@ -69,7 +67,7 @@ class CreatePlan extends React.Component {
               value={dontLike}
               onChange={this.handleChange}
             />
-          </div>
+          </div> */}
           {/* Things You Like */}
           <div className="iLikeSelector">
             <label htmlFor="iLike">Likes: </label>
@@ -83,7 +81,7 @@ class CreatePlan extends React.Component {
             />
           </div>
           {/* Calorie Scale */}
-          <div className="calorieScale">
+          {/* <div className="calorieScale">
             <label htmlFor="calorieRange">Maximum Calories: </label>
             <input
               id="calorieRange"
@@ -95,7 +93,7 @@ class CreatePlan extends React.Component {
               onChange={this.handleChange}
             />
             {calorieScale} calories per day
-          </div>
+          </div> */}
           <div className="formbutton">
             <button>Submit</button>
           </div>
