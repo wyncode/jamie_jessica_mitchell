@@ -1,0 +1,45 @@
+#aboutTitle{
+  text-align: center;
+  font-family:'Shadows Into Light', cursive;
+  font-size: 50px;
+  margin-top: 0;
+  color: white;
+}
+
+.profilePic{
+  height: 300px;
+  width: auto;
+}
+
+#profileWrapper{
+  display: flex;
+}
+
+.profile{
+  display: grid;
+  place-items: center;
+  text-align: center;
+  width: 300px;
+  margin-left: 100px;
+  margin-right: 100px;
+  margin-top: 100px;
+  font-family:'Shadows Into Light', cursive;
+  color: white;
+  margin-bottom: 0;
+}
+
+.spoon{
+  font-weight: bold;
+}
+#aboutUs{
+  background-image:url("https://image.freepik.com/free-photo/wooden-spoon-fork-wooden-background_33736-1062.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+}
+
+

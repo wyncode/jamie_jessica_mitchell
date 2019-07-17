@@ -1,3 +1,4 @@
+
 #GroceryList {
   display: grid;
   grid-template-columns: 1fr;
@@ -14,16 +15,20 @@
 }
 
 #GroceryListTitle {
+
   margin-top: 50px;
   margin-bottom: 50px;
   font-family: "Shadows Into Light", cursive;
   font-size: 75px;
   text-align: center;
+  color: green;
 }
+
 
 #GroceryListTable {
   background-color: whitesmoke;
   border: solid 2px rgb(226, 226, 226);
+
   opacity: 0.75;
   color: green;
   display: grid;
@@ -41,6 +46,7 @@
 #inputLabel {
   padding-right: 2rem;
 }
+
 #GroceryListInput {
   align-content: left;
   height: 100px;
@@ -62,3 +68,4 @@
   font-family: "Shadows Into Light", cursive;
   background-color: green;
 }
+

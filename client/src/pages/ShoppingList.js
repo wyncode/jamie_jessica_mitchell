@@ -8,11 +8,13 @@ class ShoppingList extends React.Component {
     newTask: { description: "" }
   };
 
+
   handleDescriptionChange = event => {
     let { newTask } = this.state;
     newTask.description = event.target.value;
     this.setState({ newTask });
   };
+
 
   handleFormSubmit = event => {
     event.preventDefault();
@@ -23,6 +25,7 @@ class ShoppingList extends React.Component {
       this.setState({ tasks, newTask: { description: "" } });
     }
   };
+
 
   deleteTask = id => {
     let { tasks } = this.state;
@@ -73,6 +76,7 @@ class ShoppingList extends React.Component {
       </>
     );
   }
+
 }
 
 export default ShoppingList;
