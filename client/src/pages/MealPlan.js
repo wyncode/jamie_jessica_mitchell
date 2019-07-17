@@ -10,52 +10,24 @@ class MealPlan extends React.Component {
     return (
       <div id="Meal Plan">
         <h1 id="title">Meal Plan</h1>
-        {this.props.recipes.map(recipe => {
-          console.log(recipe);
-          return <div>{recipe.title}</div>;
-        })}
-        <table>
-          <tr>
-            <th />
-            <th>Monday</th>
-            <th>Tuesday</th>
-            <th>Wednesday</th>
-            <th>Thursday</th>
-            <th>Friday</th>
-            <th>Saturday</th>
-            <th>Sunday</th>
-          </tr>
-          <tr>
-            <h3>Breakfast</h3>
-            <td />
-            <td />
-            <td />
-            <td />
-            <td />
-            <td />
-            <td />
-          </tr>
-          <tr>
-            <h3>Lunch</h3>
-            <td />
-            <td />
-            <td />
-            <td />
-            <td />
-            <td />
-            <td />
-          </tr>
-          <tr>
-            <h3>Dinner</h3>
-            <td />
-            <td />
-            <td />
-            <td />
-            <td />
-            <td />
-            <td />
-          </tr>
-        </table>
+        <div className="card-group">
+          
+          {
+            this.props.recipes.map(recipe => {
+              console.log(recipe);
+              return (
+                <div className="card">
+                  <img src={recipe.image} className="card-img-top" alt="..."/>
+                  <div className="card-body">
+                    <h5 className="card-title">{recipe.title}</h5>
+                    <p className="card-text">{recipe.instructions}</p>
+                    <p className="card-text"><small className="text-muted">Last updated 3 mins ago</small></p>
+                  </div>
+                </div>
+              )
+            })
+          }
+        </div>
       </div>
     );
   }
