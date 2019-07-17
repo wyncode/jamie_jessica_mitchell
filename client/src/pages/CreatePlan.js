@@ -11,7 +11,6 @@ class CreatePlan extends React.Component {
     selectDiet: "none",
     selectMeal: "",
     iLike: ""
-
   };
 
   //Form Submittion Functioon
@@ -42,34 +41,33 @@ class CreatePlan extends React.Component {
     const { selectDiet, iLike, selectMeal } = this.state;
     console.log("HEY!!!!", this.props);
     return (
-      <div id="formBody">
-        <div id="createPlanForm">
+      <div id="formWrapper">
+        <div id="formBody">
           <h1 id="formTitle">Let's Starting Cookin'!</h1>
           <form onSubmit={this.handleSubmit}>
             {/* Select Diet */}
-           <div className="formElement">
-            <div className="innerForm">
-                <label class="col-sm-2 col-form-label" htmlFor="selectDiet">
-                  Diet Options:{" "}
-                </label>
-                <select
-                  id="selectDiet"
-                  name="selectDiet"
-                  value={selectDiet}
-                  onChange={this.handleChange}
-                  className="form-control"
-                >
-                  <option value="choose">Choose One...</option>
-                  <option value="vegan">Vegan</option>
-                  <option value="vegetarian">Vegetarian (Lacto and Ovo)</option>
-                  <option value="paleo">Paleo</option>
-                  <option value="ketogenic">Ketogenic</option>
-                  <option value="primal">Primal</option>
-                </select>
-              </div>
+            <div className="formElement">
+              <label class="col-sm-2 col-form-label" htmlFor="selectDiet">
+                Diet Options:{" "}
+              </label>
+              <select
+                id="selectDiet"
+                name="selectDiet"
+                value={selectDiet}
+                onChange={this.handleChange}
+                className="form-control"
+              >
+                <option value="choose">Choose One...</option>
+                <option value="vegan">Vegan</option>
+                <option value="vegetarian">Vegetarian (Lacto and Ovo)</option>
+                <option value="paleo">Paleo</option>
+                <option value="ketogenic">Ketogenic</option>
+                <option value="primal">Primal</option>
+              </select>
+
               {/* Meal Select */}
               <div className="formElement">
-              <label class="col-sm-2 col-form-label" htmlFor="selectMeal">
+                <label class="col-sm-2 col-form-label" htmlFor="selectMeal">
                   Meal Options:{" "}
                 </label>
                 <select
@@ -100,9 +98,12 @@ class CreatePlan extends React.Component {
                   value={iLike}
                   onChange={this.handleChange}
                   className="form-control"
+                  autoComplete="off"
                 />
               </div>
-              <button id="submitButton"className="btn btn-outline-success">Submit</button>
+              <button id="submitButton" className="btn btn-outline-success">
+                Generate Meals
+              </button>
             </div>
           </form>
         </div>
