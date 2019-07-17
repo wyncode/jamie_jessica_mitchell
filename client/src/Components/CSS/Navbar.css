@@ -12,14 +12,18 @@
   padding: 0;
   background-color: rgba(236, 236, 236, 0.897);
   margin: 0;
+  font-family: "Shadows Into Light", cursive;
+  font-weight:bold;
+  font-size: 20px;
 }
 #navList li {
   margin: 3rem, auto;
 }
 #navList li a:hover {
-  /* text-decoration: underline; */
+  text-decoration: underline;
   cursor: pointer;
-  color: lightgrey;
+  color: grey;
+  
 }
 #navList li a {
   text-decoration: none;

@@ -57,7 +57,7 @@ a.mainButton {
   transform: scale(1.08);
 }
 
-a {
+#homeButton a {
   text-decoration: none;
   color: blue;
   text-emphasis-style: bold;

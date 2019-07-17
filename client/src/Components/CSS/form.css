@@ -6,7 +6,7 @@
   background-repeat: no-repeat;
   margin: 0;
   padding: 0;
-  height: 94vh;
+  height: 100vh;
 }
 
 #formBody {
@@ -19,7 +19,7 @@
 
 #formTitle {
   font-family: "Shadows Into Light", cursive;
-  margin: 3.5rem 0 3rem 0;
+  margin: 2rem 0 2rem 0;
   font-size: 50px;
   font-weight: bold;
   color: whitesmoke;
@@ -39,11 +39,12 @@
 }
 
 #submitButton {
-  margin-top: 5rem;
   background-color: white;
   opacity: 0.75;
   width: 10rem;
   font-family: "Shadows Into Light", cursive;
+  margin-bottom: 30px;
+  margin-top:20px;
 }
 
 #submitButton:hover {
