@@ -6,7 +6,7 @@ import "../Components/CSS/shoppinglist.css";
 let id = 0
 class ShoppingList extends React.Component {
   state = {
-    tasks:    [],
+    tasks:    [''],
     newTask:  { description: '' }
   }
 
@@ -36,6 +36,7 @@ render(){
 const { tasks, newTask } = this.state
 return(
 <div id="GroceryList">
+<div id="Clipboard">
 <h1 id="GroceryListTitle">Grocery List</h1>
 <table  id="GroceryListTable">
   <tbody id="tableBody" >
@@ -61,11 +62,11 @@ return(
   <input
     type="text"
     autoComplete="off"
-    
     value={newTask.description}
     onChange={this.handleDescriptionChange}
   />
 </form>
+</div>
 </div>
 )
 }
