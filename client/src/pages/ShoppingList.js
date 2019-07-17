@@ -1,5 +1,6 @@
 import React from "react";
-import "./shoppinglist.css";
+import "../Components/CSS/shoppinglist.css";
+
 
 
 let id = 0
@@ -34,20 +35,20 @@ this.setState({ tasks })
 render(){
 const { tasks, newTask } = this.state
 return(
-<React.Fragment>
-<h1>Grocery List</h1>
-<table >
-  <tbody >
+<div id="GroceryList">
+<h1 id="GroceryListTitle">Grocery List</h1>
+<table  id="GroceryListTable">
+  <tbody id="tableBody" >
     {
       tasks.map(task => (
         <tr id={task.id} key={task.id}>
           <td >{task.description}</td>
-          <td >
+          <td id="buttons">
             <button
-              className="btn btn-outline-success"
+              className="groceryButton"
               onClick={ () => { this.deleteTask(task.id) }}
               >
-              Check
+              Got it!
             </button>
           </td>
         </tr>
@@ -55,18 +56,17 @@ return(
     }
   </tbody>
 </table>
-<hr/>
-<form onSubmit={this.handleFormSubmit}>
+
+<form className="GroceryListInput" onSubmit={this.handleFormSubmit}>
   <input
-    
     type="text"
     autoComplete="off"
-    className="form-control"
+    
     value={newTask.description}
     onChange={this.handleDescriptionChange}
   />
 </form>
-</React.Fragment>
+</div>
 )
 }
 }
