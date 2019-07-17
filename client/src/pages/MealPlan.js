@@ -1,5 +1,6 @@
 import React from "react";
 import "../Components/CSS/mealplan.css";
+
 // import unirest from 'unirest'
 // import { Link } from 'react-router-dom'
 
@@ -8,7 +9,7 @@ class MealPlan extends React.Component {
 
   render() {
     return (
-      <div id="Meal Plan">
+      <div id="meal_plan">
         <h1 id="title">Meals for the Week</h1>
         <div className="card-group d-flex flex-wrap flex-md-row flex-column"
         >
@@ -39,9 +40,9 @@ class MealPlan extends React.Component {
             })
           }
         </div>
-        <div id="blurb">
-          We've selected 7 meals that fit your individual diet and needs.Bon Apetite! 
-        </div>
+        <footer id="blurb">
+          We've searched our cookbook to find seven recipes that fit your individual diet and needs. Bon Apetite!
+        </footer>
       </div>
      
     );
