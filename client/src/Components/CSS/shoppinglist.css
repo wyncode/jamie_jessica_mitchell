@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 #shoppingList {
   background-image: url("../Photos/clipboard.png");
   display: grid;
@@ -34,7 +34,7 @@
   justify-content: center;
   text-align: center;
 }
-=======
+
 #GroceryList{
   display: grid;
   justify-content: center;
@@ -86,5 +86,3 @@
   font-family: sans-serif;
 
 }
-
->>>>>>> master
