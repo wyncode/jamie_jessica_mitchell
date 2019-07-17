@@ -2,7 +2,7 @@ import React from "react";
 import "../Components/CSS/homepage.css";
 
 const Home = () => (
-    <>
+    
       <div id="wrapper">
       <div id="logo">
         <img src="/images/Picture1.png" alt="Logo"/>
@@ -12,7 +12,6 @@ const Home = () => (
         </div>
       </div>
       </div>
-    </>
     )
 
 export default Home
