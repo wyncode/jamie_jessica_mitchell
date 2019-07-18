@@ -19,7 +19,7 @@ const port = process.env.PORT || 8080;
 
 //middleware parses the JSON data and acts as a bridge between OS and data
 app.use(parser.json());
-app.use( express.static(path.join(__dirname, './client/build/static')) )
+app.use( express.static(path.join(__dirname, './client/build')) )
 
 //connects our API request from CreatePlan.js to the API URL
 app.post("/food", (request, response) => {
@@ -42,8 +42,8 @@ app.post("/food", (request, response) => {
     });
 });
 
-app.get('/', (req, res) => {
-  res.sendFile( path.join( `${__dirname}client/build/index.html`) )
+app.get('*', (req, res) => {
+  res.sendFile( path.join( __dirname, '/client/build/index.html') )
 })
 
 app.listen(port, () => {
