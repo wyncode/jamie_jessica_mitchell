@@ -11,13 +11,15 @@ const unirest = require("unirest");
 const parser = require("body-parser");
 const express = require("express");
 const app = express();
+const path = require('path')
 
 //assign BE to port 8080
 //linked to front end with a proxy. see package.json file
-const port = process.env.port || 8080;
+const port = process.env.PORT || 8080;
 
 //middleware parses the JSON data and acts as a bridge between OS and data
 app.use(parser.json());
+app.use( express.static(path.join(__dirname, './client/build')) )
 
 //connects our API request from CreatePlan.js to the API URL
 app.post("/food", (request, response) => {
@@ -39,6 +41,10 @@ app.post("/food", (request, response) => {
       response.json(result.body);
     });
 });
+
+app.get('*', (req, res) => {
+  res.sendFile( path.join( __dirname, '/client/build/index.html') )
+})
 
 app.listen(port, () => {
   console.log("Magic happening here...------------------------ 🌈🦄");

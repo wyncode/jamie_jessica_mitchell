@@ -13,8 +13,14 @@
 
 #profileWrapper{
   display: flex;
+  justify-content: space-evenly;
 }
-
+@media only screen and (max-width: 1111px) { 
+  #profileWrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+}
 .profile{
   display: grid;
   place-items: center;
@@ -39,7 +45,7 @@
   background-repeat: no-repeat;
   margin: 0;
   padding: 0;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 
