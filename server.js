@@ -11,6 +11,7 @@ const unirest = require("unirest");
 const parser = require("body-parser");
 const express = require("express");
 const app = express();
+const path = require('path')
 
 //assign BE to port 8080
 //linked to front end with a proxy. see package.json file
@@ -41,7 +42,7 @@ app.post("/food", (request, response) => {
 });
 
 app.get('/', (req, res) => {
-  res.sendFile( `${__dirname}/client/build/index.html`)
+  res.sendFile( path.join( `${__dirname}/client/build/index.html`) )
 })
 
 app.listen(port, () => {
