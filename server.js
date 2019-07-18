@@ -40,6 +40,10 @@ app.post("/food", (request, response) => {
     });
 });
 
+app.get('/', (req, res) => {
+  res.sendFile( `${__dirname}/client/build/index.html`)
+})
+
 app.listen(port, () => {
   console.log("Magic happening here...------------------------ 🌈🦄");
 });
